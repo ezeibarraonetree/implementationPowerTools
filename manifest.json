@@ -9,5 +9,11 @@
       "matches": ["https://*.visualvault.com/*"],
       "js": ["EXT-001.js", "EXT-002.js", "EXT-003.js"]
     }
-  ]
+  ],
+  "icons": {
+    "16": "./iconos/16.png",
+    "32": "./iconos/32.png",
+    "48": "./iconos/48.png",
+    "128": "./iconos/128.png"
+  }
 }
