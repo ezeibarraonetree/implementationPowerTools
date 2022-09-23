@@ -1,4 +1,4 @@
-function publicLink() {
+function alertBeforeClosing() {
   document.body.classList.add("EXT-001");
   window.addEventListener("beforeunload", function (e) {
     e.preventDefault();
@@ -24,7 +24,7 @@ function conditionalExt001() {
     );
 
     if (correctUrl && ref && !test) {
-      publicLink();
+      alertBeforeClosing();
     }
   } catch (error) {
     clearInterval(testInterval);
