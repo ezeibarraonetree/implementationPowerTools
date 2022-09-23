@@ -7,7 +7,13 @@
   "content_scripts": [
     {
       "matches": ["https://*.visualvault.com/*"],
-      "js": ["EXT-001.js", "EXT-002.js", "EXT-003.js"]
+      "js": [
+        "EXT-001.js",
+        "EXT-002.js",
+        "EXT-003.js",
+        "EXT-004.js",
+        "EXT-005.js"
+      ]
     }
   ],
   "icons": {

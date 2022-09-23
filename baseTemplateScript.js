@@ -1,8 +1,8 @@
-function alertBeforeClosing() {
+function fillIn() {
   document.body.classList.add("EXT-001");
 }
 
-function conditionalExt() {
+function conditionalExt004() {
   try {
     /*
     Añadir los cambios necesarios para el test*/
@@ -20,7 +20,7 @@ function conditionalExt() {
     );
 
     if (correctUrl && ref && !test) {
-      alertBeforeClosing();
+      fillIn();
     }
   } catch (error) {
     clearInterval(testInterval);
@@ -29,7 +29,7 @@ function conditionalExt() {
 }
 try {
   var testInterval = setInterval(function () {
-    conditionalExt();
+    conditionalExt004();
   }, 300);
 } catch (error) {
   clearInterval(testInterval);
