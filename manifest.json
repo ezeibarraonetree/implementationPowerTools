@@ -1,0 +1,13 @@
+{
+  "name": "ImplementationPowerTools",
+  "version": "1.0.0",
+  "description": "Herramienta para facilitar el trabajo del equipo de implementaciones",
+  "manifest_version": 3,
+  "author": "Implementation Team",
+  "content_scripts": [
+    {
+      "matches": ["https://*.visualvault.com/*"],
+      "js": ["EXT-001.js", "EXT-002.js", "EXT-003.js"]
+    }
+  ]
+}
