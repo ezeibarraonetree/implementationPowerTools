@@ -47,7 +47,7 @@ function publicLink() {
   });
 }
 
-function conditionalExt() {
+function conditionalExt002() {
   try {
     /*
     Añadir los cambios necesarios para el test*/
@@ -64,7 +64,7 @@ function conditionalExt() {
 }
 try {
   var testInterval = setInterval(function () {
-    conditionalExt();
+    conditionalExt002();
   }, 300);
 } catch (error) {
   clearInterval(testInterval);

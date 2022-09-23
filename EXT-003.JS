@@ -22,7 +22,7 @@ function dropdownTo500() {
   }
 }
 
-function conditionalExt() {
+function conditionalExt003() {
   try {
     /*
     Añadir los cambios necesarios para el test*/
@@ -47,7 +47,7 @@ function conditionalExt() {
 }
 try {
   var testInterval = setInterval(function () {
-    conditionalExt();
+    conditionalExt003();
   }, 300);
 } catch (error) {
   clearInterval(testInterval);
