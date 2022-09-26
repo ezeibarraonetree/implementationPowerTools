@@ -1,5 +1,5 @@
 function dropdownTo500() {
-  document.body.classList.add("EXT-003");
+  document.body.classList.add("ChangeDropDownTo500");
   //Muestra los 500 rows en vez de 15
   var theForm = document.forms["aspnetForm"];
   function __doPostBack2(eventTarget, eventArgument) {
@@ -30,7 +30,7 @@ function conditionalExt003() {
     //correctUrl: porcion de codigo de la url que se repite donde queremos ejecutar el test
     var correctUrl = url.indexOf("https://vv5demo.visualvault.com/app") > -1;
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
-    var test = document.querySelector(".EXT-003");
+    var test = document.querySelector(".ChangeDropDownTo500");
     //ref: elemento que solo existe en la pagina donde queremos que se ejecute
     var ref =
       document.querySelector('input[id*="PageSizeComboBox_Input"]') != null &&
@@ -42,7 +42,7 @@ function conditionalExt003() {
     }
   } catch (error) {
     clearInterval(testInterval);
-    console.error("error /* EXT-003  **/", error);
+    console.error("error /* ChangeDropDownTo500  **/", error);
   }
 }
 try {
@@ -51,5 +51,5 @@ try {
   }, 300);
 } catch (error) {
   clearInterval(testInterval);
-  console.error("error /* EXT-003  **/", error);
+  console.error("error /* ChangeDropDownTo500  **/", error);
 }

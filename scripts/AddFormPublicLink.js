@@ -34,7 +34,7 @@ const PublicFormURL = {
   },
 };
 function publicLink() {
-  document.body.classList.add("EXT-002");
+  document.body.classList.add("AddFormPublicLink");
 
   // Si la URL activa es el Form Template Admin
   document.querySelectorAll('a[id*="hlnkEmail"]').forEach((link) => {
@@ -53,13 +53,13 @@ function conditionalExt002() {
     Añadir los cambios necesarios para el test*/
     const correctUrl = new RegExp(/^https:\/\/(.*)\/FormDataAdmin$/);
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
-    var test = document.querySelector(".EXT-002");
+    var test = document.querySelector(".AddFormPublicLink");
     if (correctUrl.test(document.URL) && !test) {
       publicLink();
     }
   } catch (error) {
     clearInterval(testInterval);
-    console.error("error /* EXT-002  **/", error);
+    console.error("error /* AddFormPublicLink  **/", error);
   }
 }
 try {
@@ -68,5 +68,5 @@ try {
   }, 300);
 } catch (error) {
   clearInterval(testInterval);
-  console.error("error /* EXT-002  **/", error);
+  console.error("error /* AddFormPublicLink  **/", error);
 }

@@ -26,10 +26,25 @@ First you need to clone this repository into a local folder.
   "description": "Herramienta para facilitar el trabajo del equipo de implementaciones",
   "manifest_version": 2,
   "author": "Implementation Team",
+  "action": {
+    "default_icon": {
+      "16": "./iconos/16.png",
+      "32": "./iconos/32.png",
+      "48": "./iconos/48.png"
+    },
+    "default_title": "Implementation Power Tools",
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": ["https://*.visualvault.com/*"],
-      "js": ["EXT-001.js", "EXT-002.js", "EXT-003.js"]
+      "js": [
+        "scripts/FormDesignerAlertExit.js",
+        "scripts/AddFormPublicLink.js",
+        "scripts/ChangeDropDownTo500.js",
+        "scripts/EXT-004.js",
+        "scripts/EXT-005.js"
+      ]
     }
   ],
   "icons": {
@@ -39,6 +54,7 @@ First you need to clone this repository into a local folder.
     "128": "./iconos/128.png"
   }
 }
+
 ```
 2. Zip the cloned folder files. **Note:** You only need to zip the files.
 3. Go to the URL `about:debugging#/runtime/this-firefox`.

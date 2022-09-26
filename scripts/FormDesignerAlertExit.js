@@ -1,5 +1,5 @@
 function alertBeforeClosing() {
-  document.body.classList.add("EXT-001");
+  document.body.classList.add("FormDesignerAlertExit");
   window.addEventListener("beforeunload", function (e) {
     e.preventDefault();
     e.returnValue = "";
@@ -17,7 +17,7 @@ function conditionalExt001() {
         "https://vv5demo.visualvault.com/FormDesigner/index.html#!/formdesigner?xcid"
       ) > -1;
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
-    var test = document.querySelector(".EXT-001");
+    var test = document.querySelector(".FormDesignerAlertExit");
     //ref: elemento que solo existe en la pagina donde queremos que se ejecute
     var ref = document.querySelector(
       "form-designer > div > div.fd-header > div.fd-header-center"
@@ -28,7 +28,7 @@ function conditionalExt001() {
     }
   } catch (error) {
     clearInterval(testInterval);
-    console.error("error /* EXT-001  **/", error);
+    console.error("error /* FormDesignerAlertExit  **/", error);
   }
 }
 try {
@@ -37,5 +37,5 @@ try {
   }, 300);
 } catch (error) {
   clearInterval(testInterval);
-  console.error("error /* EXT-001  **/", error);
+  console.error("error /* FormDesignerAlertExit  **/", error);
 }
