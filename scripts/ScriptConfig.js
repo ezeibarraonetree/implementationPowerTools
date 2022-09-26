@@ -15,6 +15,5 @@ document.querySelectorAll("input.enable-script").forEach((checkbox) => {
 
   checkbox.onchange = (ev) => {
     sessionStorage.setItem(checkbox.id, checkbox.checked.toString());
-    console.log(checkbox.id, checkbox.checked.toString());
   };
 });
