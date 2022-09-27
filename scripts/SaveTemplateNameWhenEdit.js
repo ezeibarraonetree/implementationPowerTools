@@ -1,4 +1,4 @@
-function saveTemplateNameWhenEdit() {
+function saveTemplateNameWhenEditing() {
   document.body.classList.add("EXT-005");
   var selectorFila = document.querySelector(
     "#ctl00_ContentBody_DG1_ctl00 > tbody"
@@ -14,6 +14,14 @@ function saveTemplateNameWhenEdit() {
   }
 }
 
+function releaseFormTemplateAndFillIn() {
+  document.body.classList.add("EXT-005-V2");
+  var filas = document.querySelectorAll("td.rgSorted");
+  for (let index = 0; index < filas.length; index++) {
+    console.log("filas", filas[index].innerText);
+  }
+}
+
 function conditionalExt005() {
   try {
     /*
@@ -23,13 +31,19 @@ function conditionalExt005() {
     var correctUrl = url.indexOf("FormTemplateAdmin") > -1;
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
     var test = document.querySelector(".EXT-005");
+    var test2 = document.querySelector(".EXT-005-V2");
     //ref: elemento que solo existe en la pagina donde queremos que se ejecute
-    var ref =
-      document.querySelector("#ctl00_layoutBody > div.divPageGrid > h1")
-        .innerText === "Form Template Administration";
+    var ref = document.querySelector(
+      "#ctl00_layoutBody > div.divPageGrid > h1"
+    );
 
     if (correctUrl && ref && !test) {
-      saveTemplateNameWhenEdit();
+      saveTemplateNameWhenEditing();
+    }
+    if (correctUrl && ref && !test2) {
+      if (sessionStorage.getItem("EDIT") == "true") {
+        releaseFormTemplateAndFillIn();
+      }
     }
   } catch (error) {
     clearInterval(testInterval);

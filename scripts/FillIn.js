@@ -1,12 +1,17 @@
-function fillIn() {
+function closeTab() {
   document.body.classList.add("EXT-004");
-
   const img =
-    '<a href="" tabindex="0" title="Switch to Group View" class="k-toggle-button k-button k-button-icon ng-scope" data-group="viewmode" id="conditionView" data-uid="7cdfb5ab-891e-49ed-93c4-ee154891c14a" data-overflow="never" style="visibility: visible;" data-role="tooltip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 25 25" width="20" height="20"><path d="M20.7 5.2a1.024 1.024 0 0 1 0 1.448l-2.626 2.628-3.35-3.35L17.35 3.3a1.024 1.024 0 0 1 1.448 0zm-4.166 5.614-3.35-3.35-8.509 8.511L3 21l5.025-1.675z"></path></svg></a>';
+    '<div id="EXT-004-IMG"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 25 25" width="20" height="20"><path d="M20.7 5.2a1.024 1.024 0 0 1 0 1.448l-2.626 2.628-3.35-3.35L17.35 3.3a1.024 1.024 0 0 1 1.448 0zm-4.166 5.614-3.35-3.35-8.509 8.511L3 21l5.025-1.675z"></path></svg></div>';
   document.querySelector("#conditionView").insertAdjacentHTML("afterend", img);
+  const editButton = document.querySelector("#EXT-004-IMG");
+  editButton.addEventListener("click", function () {
+    console.log("holaaa");
+    sessionStorage.setItem("EDIT", "true");
+    //window.close();
+  });
 }
 
-function conditionalExt005() {
+function conditionalExt004() {
   try {
     /*
     Añadir los cambios necesarios para el test*/
@@ -24,7 +29,7 @@ function conditionalExt005() {
     );
 
     if (correctUrl && ref && !test) {
-      fillIn();
+      closeTab();
     }
   } catch (error) {
     clearInterval(testInterval);
@@ -33,7 +38,7 @@ function conditionalExt005() {
 }
 try {
   var testInterval = setInterval(function () {
-    conditionalExt005();
+    conditionalExt004();
   }, 300);
 } catch (error) {
   clearInterval(testInterval);
