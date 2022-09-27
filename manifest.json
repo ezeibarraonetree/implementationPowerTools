@@ -20,8 +20,7 @@
         "scripts/FormDesignerAlertExit.js",
         "scripts/AddFormPublicLink.js",
         "scripts/ChangeDropDownTo500.js",
-        "scripts/EXT-004.js",
-        "scripts/EXT-005.js"
+        "scripts/SaveTemplateNameWhenEdit.js"
       ]
     }
   ],
@@ -31,7 +30,5 @@
     "48": "./iconos/48.png",
     "128": "./iconos/128.png"
   },
-  "permissions": [
-    "storage"
-  ]
+  "permissions": ["storage"]
 }

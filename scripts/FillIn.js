@@ -1,4 +1,4 @@
-function saveTemplateNameWhenEdit() {
+function fillIn() {
   document.body.classList.add("EXT-004");
 
   const img =
@@ -24,7 +24,7 @@ function conditionalExt005() {
     );
 
     if (correctUrl && ref && !test) {
-      saveTemplateNameWhenEdit();
+      fillIn();
     }
   } catch (error) {
     clearInterval(testInterval);
