@@ -1,10 +1,12 @@
 function expandGroupsAndConditions() {
   document.body.classList.add("ExpandGroupAndConditions");
-  document
-    .querySelector(
-      "form-designer > div > div.fd-body > div.fd-main-panel > div.fd-grouppanel-top > div.fd-grouppanel-main > div.fd-grouppanel-left > div.fd-grouplist-holder > div > ul > li > div > span.k-icon.k-i-expand"
-    )
-    .click();
+  var listOfGroupAndConditions = document.querySelectorAll(
+    "form-designer > div > div.fd-body > div.fd-main-panel > div.fd-grouppanel-top > div.fd-grouppanel-main > div.fd-grouppanel-left > div.fd-grouplist-holder > div > ul > li > div > span.k-icon.k-i-expand"
+  );
+  for (let index = 0; index < listOfGroupAndConditions.length; index++) {
+    const element = listOfGroupAndConditions[index];
+    element.click();
+  }
 }
 
 function conditionalExpandGroupAndConditions() {
@@ -20,11 +22,13 @@ function conditionalExpandGroupAndConditions() {
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
     var test = document.querySelector(".ExpandGroupAndConditions");
     //ref: elemento que solo existe en la pagina donde queremos que se ejecute
-    var ref = document.querySelector("div[data-role='treeview'");
+    var ref = document.querySelector("div[data-role='treeview']");
 
-    if (correctUrl && ref && !test) {
-      expandGroupsAndConditions();
-    }
+    chrome.storage.local.get(["ExpandGroupAndConditions"], (result) => {
+      if (correctUrl && ref && !test && result.ExpandGroupAndConditions) {
+        expandGroupsAndConditions();
+      }
+    });
   } catch (error) {
     clearInterval(testInterval);
     console.error("error /* ExpandGroupAndConditions  **/", error);

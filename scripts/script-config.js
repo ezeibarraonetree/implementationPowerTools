@@ -1,5 +1,10 @@
 chrome.storage.local.get(
-  ["FormDesignerAlertExit", "AddFormPublicLink", "ChangeDropDownTo500"],
+  [
+    "FormDesignerAlertExit",
+    "AddFormPublicLink",
+    "ChangeDropDownTo500",
+    "ExpandGroupAndConditions",
+  ],
   (result) => {
     if (result.FormDesignerAlertExit == null) {
       chrome.storage.local.set({ FormDesignerAlertExit: true });
@@ -11,6 +16,10 @@ chrome.storage.local.get(
 
     if (result.ChangeDropDownTo500 == null) {
       chrome.storage.local.set({ ChangeDropDownTo500: true });
+    }
+
+    if (result.ExpandGroupAndConditions == null) {
+      chrome.storage.local.set({ ExpandGroupAndConditions: true });
     }
   }
 );
