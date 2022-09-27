@@ -19,8 +19,7 @@
       "js": [
         "scripts/FormDesignerAlertExit.js",
         "scripts/AddFormPublicLink.js",
-        "scripts/ChangeDropDownTo500.js",
-        "scripts/SaveTemplateNameWhenEdit.js"
+        "scripts/ChangeDropDownTo500.js"
       ]
     }
   ],
