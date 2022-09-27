@@ -16,50 +16,12 @@ First you need to clone this repository into a local folder.
 
 ![image](https://user-images.githubusercontent.com/109621179/191980019-fc4bdcea-5b67-49ba-b8e2-419ebeb738a9.png)
 
-### Mozilla Firefox
+4. After the installation you should refresh VisualVault page in order to initialize the settings.
 
-1. Modify the file manifest.json to look like this:
-```json
-{
-  "name": "ImplementationPowerTools",
-  "version": "1.0.0",
-  "description": "Herramienta para facilitar el trabajo del equipo de implementaciones",
-  "manifest_version": 2,
-  "author": "Implementation Team",
-  "action": {
-    "default_icon": {
-      "16": "./iconos/16.png",
-      "32": "./iconos/32.png",
-      "48": "./iconos/48.png"
-    },
-    "default_title": "Implementation Power Tools",
-    "default_popup": "popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://*.visualvault.com/*"],
-      "js": [
-        "scripts/FormDesignerAlertExit.js",
-        "scripts/AddFormPublicLink.js",
-        "scripts/ChangeDropDownTo500.js",
-        "scripts/EXT-004.js",
-        "scripts/EXT-005.js"
-      ]
-    }
-  ],
-  "icons": {
-    "16": "./iconos/16.png",
-    "32": "./iconos/32.png",
-    "48": "./iconos/48.png",
-    "128": "./iconos/128.png"
-  }
-}
+> For now, it only supports Google Chrome.
 
-```
-2. Zip the cloned folder files. **Note:** You only need to zip the files.
-3. Go to the URL `about:debugging#/runtime/this-firefox`.
-4. Click on "Load Temporary Add-on..."
+### Usage
 
-![image](https://user-images.githubusercontent.com/109621179/191985851-f9b179c1-f0e7-43fb-883c-ddb9bb5bdfee.png)
+In your browser toolbar click on the extension icon to access its settings:
 
-5. Select the zipped file.
+![image](https://user-images.githubusercontent.com/109621179/192633777-4abfe977-2bd8-42dd-be46-6ee02f1c2500.png)
