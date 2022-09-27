@@ -6,7 +6,7 @@ function alertBeforeClosing() {
   });
 }
 
-function conditionalExt001() {
+function conditionalAlertBeforeClosing() {
   try {
     /*
     Añadir los cambios necesarios para el test*/
@@ -35,7 +35,7 @@ function conditionalExt001() {
 }
 try {
   var testInterval = setInterval(function () {
-    conditionalExt001();
+    conditionalAlertBeforeClosing();
   }, 300);
 } catch (error) {
   clearInterval(testInterval);
