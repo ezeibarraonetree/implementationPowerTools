@@ -20,7 +20,9 @@
         "scripts/FormDesignerAlertExit.js",
         "scripts/AddFormPublicLink.js",
         "scripts/ChangeDropDownTo500.js",
-        "scripts/ExpandGroupAndConditions.js"
+        "scripts/ExpandGroupAndConditions.js",
+        "scripts/SaveTemplateNameWhenEdit.js",
+        "scripts/AddFormTemplateNameTitle.js"
       ]
     }
   ],

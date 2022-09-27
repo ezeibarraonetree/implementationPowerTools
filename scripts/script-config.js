@@ -4,6 +4,7 @@ chrome.storage.local.get(
     "AddFormPublicLink",
     "ChangeDropDownTo500",
     "ExpandGroupAndConditions",
+    "AddFormTemplateNameTitle",
   ],
   (result) => {
     if (result.FormDesignerAlertExit == null) {
@@ -20,6 +21,10 @@ chrome.storage.local.get(
 
     if (result.ExpandGroupAndConditions == null) {
       chrome.storage.local.set({ ExpandGroupAndConditions: true });
+    }
+
+    if (result.AddFormTemplateNameTitle == null) {
+      chrome.storage.local.set({ AddFormTemplateNameTitle: true });
     }
   }
 );

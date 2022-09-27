@@ -22,11 +22,15 @@ function conditionalExpandGroupAndConditions() {
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
     var test = document.querySelector(".ExpandGroupAndConditions");
     //ref: elemento que solo existe en la pagina donde queremos que se ejecute
-    var ref = document.querySelector("div[data-role='treeview']");
+    var ref = document.querySelector(
+      "body > div.mainContainer-heightControl > div.outer-ui-view.ng-scope > main > div.main-body > div.main-content-container > div.main-ui-view.ng-scope > form-designer > div > div.fd-body > div.fd-main-panel > div.fd-grouppanel-top"
+    );
 
     chrome.storage.local.get(["ExpandGroupAndConditions"], (result) => {
       if (correctUrl && ref && !test && result.ExpandGroupAndConditions) {
-        expandGroupsAndConditions();
+        if (parseInt(ref.style.height.slice(0, 3)) > 0) {
+          expandGroupsAndConditions();
+        }
       }
     });
   } catch (error) {
