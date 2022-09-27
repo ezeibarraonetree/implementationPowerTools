@@ -54,9 +54,11 @@ function conditionalExt002() {
     const correctUrl = new RegExp(/^https:\/\/(.*)\/FormDataAdmin$/);
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
     var test = document.querySelector(".AddFormPublicLink");
-    if (correctUrl.test(document.URL) && !test) {
-      publicLink();
-    }
+    chrome.storage.local.get(["AddFormPublicLink"], (result) => {
+      if (correctUrl.test(document.URL) && !test && result.AddFormPublicLink) {
+        publicLink();
+      }
+    });
   } catch (error) {
     clearInterval(testInterval);
     console.error("error /* AddFormPublicLink  **/", error);

@@ -37,9 +37,11 @@ function conditionalExt003() {
       document.querySelector('input[id*="PageSizeComboBox_Input"]').value !=
         "500";
 
-    if (correctUrl && ref && !test) {
-      dropdownTo500();
-    }
+    chrome.storage.local.get(["ChangeDropDownTo500"], (result) => {
+      if (correctUrl && ref && !test && result.ChangeDropDownTo500) {
+        dropdownTo500();
+      }
+    });
   } catch (error) {
     clearInterval(testInterval);
     console.error("error /* ChangeDropDownTo500  **/", error);

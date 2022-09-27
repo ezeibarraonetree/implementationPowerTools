@@ -30,5 +30,8 @@
     "32": "./iconos/32.png",
     "48": "./iconos/48.png",
     "128": "./iconos/128.png"
-  }
+  },
+  "permissions": [
+    "storage"
+  ]
 }

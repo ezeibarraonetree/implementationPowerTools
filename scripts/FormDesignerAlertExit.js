@@ -23,9 +23,11 @@ function conditionalExt001() {
       "form-designer > div > div.fd-header > div.fd-header-center"
     );
 
-    if (correctUrl && ref && !test) {
-      alertBeforeClosing();
-    }
+    chrome.storage.local.get(["FormDesignerAlertExit"], (result) => {
+      if (correctUrl && ref && !test && result.FormDesignerAlertExit) {
+        alertBeforeClosing();
+      }
+    });
   } catch (error) {
     clearInterval(testInterval);
     console.error("error /* FormDesignerAlertExit  **/", error);
