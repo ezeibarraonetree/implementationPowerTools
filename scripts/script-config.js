@@ -3,7 +3,6 @@ initStorage({
   AddFormPublicLink: true,
   ChangeDropDownTo500: true,
   ExpandGroupAndConditions: true,
-  AddFormTemplateNameTitle: true,
 });
 
 document.querySelectorAll("input.enable-script").forEach((checkbox) => {
