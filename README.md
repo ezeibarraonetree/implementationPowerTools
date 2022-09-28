@@ -1,6 +1,29 @@
 # Implementation Power Tools
 
-Tool to facilitate the work of the implementation team
+Tool to facilitate the work of the implementation team.
+
+## Table of Contents
+
+* [Installation](#installation)
+  * [Google Chrome](#google-chrome)
+* [Usage](#usage)
+* [Adding scripts to extension](#adding-scripts-to-extension)
+* [Implementation Hooks](#implementation-hooks)
+  * [What are hooks?](#what-are-hooks)
+  * [Types](#types)
+    * [useEvent](#useevent)
+      * [Usage](#usage-1)
+      * [Example of use](#example-of-use)
+    * [useInnerText](#useinnertext)
+      * [Usage](#usage-2)
+      * [Example of use](#example-of-use-1)
+    * [useInnerHTML](#useinnerhtml)
+      * [Usage](#usage-3)
+      * [Example of use](#example-of-use-2)
+    * [useInsertAdjacentHTML](#useinsertadjacenthtml)
+      * [Usage](#usage-4)
+      * [Example of use](#example-of-use-3)
+
 
 ## Installation
 
