@@ -42,8 +42,13 @@ function publicLink() {
     pfu.href = link;
     if (pfu.hasPublicFormURL()) return;
     const url = pfu.getURL();
-    const newLink = pfu.createLink(url);
-    link.insertAdjacentElement("afterend", newLink);
+    const newLinkHTML = pfu.createLink(url);
+    new useInsertAdjacentHTML(
+      "Add a icon with public link",
+      link,
+      newLinkHTML,
+      "afterend"
+    ).inject();
   });
 }
 

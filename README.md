@@ -1,4 +1,5 @@
 # Implementation Power Tools
+
 Tool to facilitate the work of the implementation team
 
 ## Installation
@@ -31,12 +32,30 @@ In your browser toolbar click on the extension icon to access its settings:
 1. Copy the base template [`baseTemplateScript.js`](https://github.com/ezeibarraonetree/implementationPowerTools/blob/main/baseTemplateScript.js) file to `scripts` folder and modify as needed.
 2. Change file and function names having in mind the script functionality (like the other scripts).
 3. Modify the condition before running the function to look like this:
-  ```js
-  getStorageValue("YourScriptDescriptiveName", (result) => {
-      if (correctUrl && ref && test && result) {
-          yourScriptDescriptiveName();
-      }
-  });
-  ```
+
+```js
+getStorageValue("YourScriptDescriptiveName", (result) => {
+  if (correctUrl && ref && test && result) {
+    yourScriptDescriptiveName();
+  }
+});
+```
+
 4. Add the file relative path to `manifest.json > content_scripts > js` array.
 5. Modify [`scripts/script-config.js`](https://github.com/ezeibarraonetree/implementationPowerTools/blob/main/scripts/script-config.js) adding a an object with the value to the `initStorage()` helper function at the begin.
+
+# Implementation Hooks
+
+## What are 'Hooks'?
+
+> Hooks are nothing more, and nothing less, than a wrap around a generic callback.
+
+## Types
+
+### useEvent
+
+Overrides default `addEventListener`.
+
+```js
+new useEvent(description, selector, event, fn);
+```

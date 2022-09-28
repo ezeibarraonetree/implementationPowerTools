@@ -17,6 +17,7 @@
     {
       "matches": ["https://*.visualvault.com/*"],
       "js": [
+        "library/hooks.js",
         "utils/storage.js",
         "scripts/FormDesignerAlertExit.js",
         "scripts/AddFormPublicLink.js",
