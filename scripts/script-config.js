@@ -18,7 +18,7 @@ document.querySelectorAll("input.enable-script").forEach((checkbox) => {
 
 /** Helper para inicializar las variables del local storage
  *
- * @param initState Es un objeto que contiene todos los valores
+ * @param {{}} initState Es un objeto que contiene todos los valores
  */
 function initStorage(initState) {
   const keys = Object.keys(initState);

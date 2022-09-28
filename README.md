@@ -56,6 +56,104 @@ getStorageValue("YourScriptDescriptiveName", (result) => {
 
 Overrides default `addEventListener`.
 
+#### Usage
+
 ```js
-new useEvent(description, selector, event, fn);
+/** Overrides default addEventListener
+ *
+ * @param {string} description What you are doing
+ * @param {string} selector The CSS selector
+ * @param {string} event A JavaScript event (e.g: "click")
+ * @param {function} fn A callback function to execute whenever the event occurs
+ */
+new useEvent(description, selector, event, fn)
+```
+
+#### Example of use
+
+```js
+new useEvent(
+  "When you click on the button an alert shows up", 
+  "body > button", 
+  "click", 
+  () => {
+    alert("This is an alert")
+  });
+```
+
+### useInnerText
+
+Change the inner text of the selector.
+
+#### Usage
+
+```js
+  /** Change the inner text of the selector.
+   *
+   * @param {string} description What you are doing
+   * @param {string} selector The CSS selector
+   * @param {string} newText The text you want to change
+   */
+new useInnerText(description, selector, newText)
+```
+
+#### Example of use
+
+```js
+new useInnerText(
+  "Changing the text of a div tag", 
+  "body > div", 
+  "Hello World"
+);
+```
+### useInnerHTML
+
+Change the inner HTML of the selector.
+
+#### Usage
+
+```js
+  /** Change the inner HTML of the selector.
+   *
+   * @param {string} description What you are doing
+   * @param {string} selector The CSS selector
+   * @param {string} newHTML The HTML you want to change
+   */
+new useInnerHTML(description, selector, newHTML)
+```
+
+#### Example of use
+
+```js
+new useInnerHTML(
+  "Changing the HTML of a div tag", 
+  "body > div", 
+  "<h1>Hello World</h1>"
+);
+```
+
+### useInsertAdjacentHTML
+
+#### Usage
+
+```js
+/** Inserts Adjacent HTML to the selector
+ *
+ * @param {string} description What you are doing
+ * @param {string} selector The CSS selector
+ * @param {string} newHTML The content you want to insert
+ * @param {string} position One of these: beforebegin | afterbegin | beforeend | afterend
+ */
+new useInsertAdjacentHTML(description, selector, newHTML, position)
+```
+
+#### Example of use
+
+```js
+new useInsertAdjacentHTML(
+  "Adding a paragraph after the button ends", 
+  "body > button", 
+  "<p>Hello</p>", 
+  "afterend"
+);
 ```
