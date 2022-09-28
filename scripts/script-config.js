@@ -1,33 +1,10 @@
-chrome.storage.local.get(
-  [
-    "FormDesignerAlertExit",
-    "AddFormPublicLink",
-    "ChangeDropDownTo500",
-    "ExpandGroupAndConditions",
-    "AddFormTemplateNameTitle",
-  ],
-  (result) => {
-    if (result.FormDesignerAlertExit == null) {
-      chrome.storage.local.set({ FormDesignerAlertExit: true });
-    }
-
-    if (result.AddFormPublicLink == null) {
-      chrome.storage.local.set({ AddFormPublicLink: true });
-    }
-
-    if (result.ChangeDropDownTo500 == null) {
-      chrome.storage.local.set({ ChangeDropDownTo500: true });
-    }
-
-    if (result.ExpandGroupAndConditions == null) {
-      chrome.storage.local.set({ ExpandGroupAndConditions: true });
-    }
-
-    if (result.AddFormTemplateNameTitle == null) {
-      chrome.storage.local.set({ AddFormTemplateNameTitle: true });
-    }
-  }
-);
+initStorage({
+  FormDesignerAlertExit: true,
+  AddFormPublicLink: true,
+  ChangeDropDownTo500: true,
+  ExpandGroupAndConditions: true,
+  AddFormTemplateNameTitle: true,
+});
 
 document.querySelectorAll("input.enable-script").forEach((checkbox) => {
   chrome.storage.local.get([checkbox.id], (result) => {
@@ -38,3 +15,21 @@ document.querySelectorAll("input.enable-script").forEach((checkbox) => {
     chrome.storage.local.set({ [checkbox.id]: checkbox.checked });
   };
 });
+
+/** Helper para inicializar las variables del local storage
+ *
+ * @param initState Es un objeto que contiene todos los valores
+ */
+function initStorage(initState) {
+  const keys = Object.keys(initState);
+
+  chrome.storage.local.get(keys, (result) => {
+    keys.forEach((key) => {
+      const value = initState[key];
+
+      if (result[key] == null) {
+        chrome.storage.local.set({ [key]: value });
+      }
+    });
+  });
+}
