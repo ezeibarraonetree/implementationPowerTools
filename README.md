@@ -39,10 +39,4 @@ In your browser toolbar click on the extension icon to access its settings:
   });
   ```
 4. Add the file relative path to `manifest.json > content_scripts > js` array.
-5. Modify [`scripts/script-config.js`](https://github.com/ezeibarraonetree/implementationPowerTools/blob/main/scripts/script-config.js) adding a descriptive name of your script functionality to the initial array and a condition to initialize that variable in the local storage:
-  ```js
-  if (result.YourScriptDescriptiveName == null) {
-      chrome.storage.local.set({ YourScriptDescriptiveName: true });
-  }
-  ```
-  
+5. Modify [`scripts/script-config.js`](https://github.com/ezeibarraonetree/implementationPowerTools/blob/main/scripts/script-config.js) adding a an object with the value to the `initStorage()` helper function at the begin.
