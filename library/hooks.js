@@ -5,7 +5,7 @@ class Hook {
   }
 
   inject() {
-    console.log(`%c${this.description}`, "background: green;");
+    console.log(`%c${this.description}`, "background: green; color: white;");
     this.method();
   }
 }
@@ -14,13 +14,13 @@ class useEvent extends Hook {
   /** Overrides default addEventListener
    *
    * @param {string} description What you are doing
-   * @param {string} selector The CSS selector
+   * @param {NodeElement} selector The CSS selector. e.g: document.querySelector("#container > button")
    * @param {string} event A JavaScript event (e.g: "click")
    * @param {function} fn A callback function to execute whenever the event occurs
    */
   constructor(description, selector, event, fn) {
     super(description, () => {
-      document.querySelector(selector).addEventListener(event, fn);
+      selector.addEventListener(event, fn);
     });
   }
 }
@@ -57,7 +57,7 @@ class useInsertAdjacentHTML extends Hook {
   /** Inserts Adjacent HTML to the selector
    *
    * @param {string} description What you are doing
-   * @param {string} selector The CSS selector
+   * @param {NodeElement} selector The CSS selector. e.g: document.querySelector("#container > button")
    * @param {string} newHTML The content you want to insert
    * @param {string} position One of these: beforebegin | afterbegin | beforeend | afterend
    */

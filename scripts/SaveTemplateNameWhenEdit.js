@@ -7,9 +7,17 @@ function saveTemplateNameWhenEditing() {
     var templateName = document.querySelectorAll("td.rgSorted");
     var formDesign = selectorFila[index].children[3];
     if (formDesign.innerText == "Edit") {
-      formDesign.addEventListener("click", () => {
-        chrome.storage.local.set({ name: templateName[index].innerText });
-      });
+      // formDesign.addEventListener("click", () => {
+      //   chrome.storage.local.set({ name: templateName[index].innerText });
+      // });
+      new useEvent(
+        "When you click on the form design the template name is saved",
+        formDesign,
+        "click",
+        () => {
+          chrome.storage.local.set({ name: templateName[index].innerText });
+        }
+      ).inject();
     }
   }
 }
@@ -27,7 +35,6 @@ function conditionalSaveTemplateNameWhenEditing() {
     var ref = document.querySelector(
       "#ctl00_layoutBody > div.divPageGrid > h1"
     );
-
     if (correctUrl && ref && !test) {
       saveTemplateNameWhenEditing();
     }

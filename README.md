@@ -4,26 +4,25 @@ Tool to facilitate the work of the implementation team.
 
 ## Table of Contents
 
-* [Installation](#installation)
-  * [Google Chrome](#google-chrome)
-* [Usage](#usage)
-* [Adding scripts to extension](#adding-scripts-to-extension)
-* [Implementation Hooks](#implementation-hooks)
-  * [What are hooks?](#what-are-hooks)
-  * [Types](#types)
-    * [useEvent](#useevent)
-      * [Usage](#usage-1)
-      * [Example of use](#example-of-use)
-    * [useInnerText](#useinnertext)
-      * [Usage](#usage-2)
-      * [Example of use](#example-of-use-1)
-    * [useInnerHTML](#useinnerhtml)
-      * [Usage](#usage-3)
-      * [Example of use](#example-of-use-2)
-    * [useInsertAdjacentHTML](#useinsertadjacenthtml)
-      * [Usage](#usage-4)
-      * [Example of use](#example-of-use-3)
-
+- [Installation](#installation)
+  - [Google Chrome](#google-chrome)
+- [Usage](#usage)
+- [Adding scripts to extension](#adding-scripts-to-extension)
+- [Implementation Hooks](#implementation-hooks)
+  - [What are hooks?](#what-are-hooks)
+  - [Types](#types)
+    - [useEvent](#useevent)
+      - [Usage](#usage-1)
+      - [Example of use](#example-of-use)
+    - [useInnerText](#useinnertext)
+      - [Usage](#usage-2)
+      - [Example of use](#example-of-use-1)
+    - [useInnerHTML](#useinnerhtml)
+      - [Usage](#usage-3)
+      - [Example of use](#example-of-use-2)
+    - [useInsertAdjacentHTML](#useinsertadjacenthtml)
+      - [Usage](#usage-4)
+      - [Example of use](#example-of-use-3)
 
 ## Installation
 
@@ -85,23 +84,24 @@ Overrides default `addEventListener`.
 /** Overrides default addEventListener
  *
  * @param {string} description What you are doing
- * @param {string} selector The CSS selector
+ * @param {NodeElement} selector The CSS selector. e.g: document.querySelector("#container > button")
  * @param {string} event A JavaScript event (e.g: "click")
  * @param {function} fn A callback function to execute whenever the event occurs
  */
-new useEvent(description, selector, event, fn)
+new useEvent(description, selector, event, fn);
 ```
 
 #### Example of use
 
 ```js
 new useEvent(
-  "When you click on the button an alert shows up", 
-  "body > button", 
-  "click", 
+  "When you click on the button an alert shows up",
+  document.querySelector("#container > button"),
+  "click",
   () => {
-    alert("This is an alert")
-  });
+    alert("This is an alert");
+  }
+);
 ```
 
 ### useInnerText
@@ -111,24 +111,21 @@ Change the inner text of the selector.
 #### Usage
 
 ```js
-  /** Change the inner text of the selector.
-   *
-   * @param {string} description What you are doing
-   * @param {string} selector The CSS selector
-   * @param {string} newText The text you want to change
-   */
-new useInnerText(description, selector, newText)
+/** Change the inner text of the selector.
+ *
+ * @param {string} description What you are doing
+ * @param {string} selector The CSS selector
+ * @param {string} newText The text you want to change
+ */
+new useInnerText(description, selector, newText);
 ```
 
 #### Example of use
 
 ```js
-new useInnerText(
-  "Changing the text of a div tag", 
-  "body > div", 
-  "Hello World"
-);
+new useInnerText("Changing the text of a div tag", "body > div", "Hello World");
 ```
+
 ### useInnerHTML
 
 Change the inner HTML of the selector.
@@ -136,21 +133,21 @@ Change the inner HTML of the selector.
 #### Usage
 
 ```js
-  /** Change the inner HTML of the selector.
-   *
-   * @param {string} description What you are doing
-   * @param {string} selector The CSS selector
-   * @param {string} newHTML The HTML you want to change
-   */
-new useInnerHTML(description, selector, newHTML)
+/** Change the inner HTML of the selector.
+ *
+ * @param {string} description What you are doing
+ * @param {string} selector The CSS selector
+ * @param {string} newHTML The HTML you want to change
+ */
+new useInnerHTML(description, selector, newHTML);
 ```
 
 #### Example of use
 
 ```js
 new useInnerHTML(
-  "Changing the HTML of a div tag", 
-  "body > div", 
+  "Changing the HTML of a div tag",
+  "body > div",
   "<h1>Hello World</h1>"
 );
 ```
@@ -163,20 +160,20 @@ new useInnerHTML(
 /** Inserts Adjacent HTML to the selector
  *
  * @param {string} description What you are doing
- * @param {string} selector The CSS selector
+ * @param {NodeElement} selector The CSS selector. e.g: document.querySelector("#container > button")
  * @param {string} newHTML The content you want to insert
  * @param {string} position One of these: beforebegin | afterbegin | beforeend | afterend
  */
-new useInsertAdjacentHTML(description, selector, newHTML, position)
+new useInsertAdjacentHTML(description, selector, newHTML, position);
 ```
 
 #### Example of use
 
 ```js
 new useInsertAdjacentHTML(
-  "Adding a paragraph after the button ends", 
-  "body > button", 
-  "<p>Hello</p>", 
+  "Adding a paragraph after the button ends",
+  document.querySelector("#container > button"),
+  "<p>Hello</p>",
   "afterend"
 );
 ```

@@ -1,6 +1,7 @@
 function addFormTemplateNameTitle() {
   document.body.classList.add("AddFormTemplateNameTitle");
   chrome.storage.local.get(["name"], (result) => {
+    console.log("ssss", result.name);
     document.title += ` - Form Template Name: ${result.name}`;
   });
 }
@@ -22,11 +23,9 @@ function conditionalAddFormTemplateNameTitle() {
       "form-designer > div > div.fd-header > div.fd-header-center"
     );
 
-    getStorageValue("addFormTemplateNameTitle", (result) => {
-      if (correctUrl && ref && !test && result) {
-        addFormTemplateNameTitle();
-      }
-    });
+    if (correctUrl && ref && !test) {
+      addFormTemplateNameTitle();
+    }
   } catch (error) {
     clearInterval(testInterval);
     console.error("error /* addFormTemplateNameTitle  **/", error);
