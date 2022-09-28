@@ -22,8 +22,8 @@ function conditionalAddFormTemplateNameTitle() {
       "form-designer > div > div.fd-header > div.fd-header-center"
     );
 
-    chrome.storage.local.get(["AddFormTemplateNameTitle"], (result) => {
-      if (correctUrl && ref && !test && result.AddFormTemplateNameTitle) {
+    getStorageValue("addFormTemplateNameTitle", (result) => {
+      if (correctUrl && ref && !test && result) {
         addFormTemplateNameTitle();
       }
     });

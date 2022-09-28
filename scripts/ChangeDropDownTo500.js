@@ -37,8 +37,8 @@ function conditionalDropdownTo500() {
       document.querySelector('input[id*="PageSizeComboBox_Input"]').value !=
         "500";
 
-    chrome.storage.local.get(["ChangeDropDownTo500"], (result) => {
-      if (correctUrl && ref && !test && result.ChangeDropDownTo500) {
+    getStorageValue("ChangeDropDownTo500", (result) => {
+      if (correctUrl && ref && !test && result) {
         dropdownTo500();
       }
     });

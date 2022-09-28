@@ -32,8 +32,8 @@ In your browser toolbar click on the extension icon to access its settings:
 2. Change file and function names having in mind the script functionality (like the other scripts).
 3. Modify the condition before running the function to look like this:
   ```js
-  chrome.storage.local.get(["YourScriptDescriptiveName"], (result) => {
-      if (correctUrl && ref && test && result.YourScriptDescriptiveName) {
+  getStorageValue("YourScriptDescriptiveName", (result) => {
+      if (correctUrl && ref && test && result) {
           yourScriptDescriptiveName();
       }
   });

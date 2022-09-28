@@ -23,8 +23,8 @@ function conditionalAlertBeforeClosing() {
       "form-designer > div > div.fd-header > div.fd-header-center"
     );
 
-    chrome.storage.local.get(["FormDesignerAlertExit"], (result) => {
-      if (correctUrl && ref && !test && result.FormDesignerAlertExit) {
+    getStorageValue("FormDesignerAlertExit", (result) => {
+      if (correctUrl && ref && !test && result) {
         alertBeforeClosing();
       }
     });

@@ -54,8 +54,8 @@ function conditionalPublicLink() {
     const correctUrl = new RegExp(/^https:\/\/(.*)\/FormDataAdmin$/);
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
     var test = document.querySelector(".AddFormPublicLink");
-    chrome.storage.local.get(["AddFormPublicLink"], (result) => {
-      if (correctUrl.test(document.URL) && !test && result.AddFormPublicLink) {
+    getStorageValue("AddFormPublicLink", (result) => {
+      if (correctUrl.test(document.URL) && !test && result) {
         publicLink();
       }
     });

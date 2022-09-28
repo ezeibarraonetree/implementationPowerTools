@@ -26,8 +26,8 @@ function conditionalExpandGroupAndConditions() {
       "body > div.mainContainer-heightControl > div.outer-ui-view.ng-scope > main > div.main-body > div.main-content-container > div.main-ui-view.ng-scope > form-designer > div > div.fd-body > div.fd-main-panel > div.fd-grouppanel-top"
     );
 
-    chrome.storage.local.get(["ExpandGroupAndConditions"], (result) => {
-      if (correctUrl && ref && !test && result.ExpandGroupAndConditions) {
+    getStorageValue("ExpandGroupAndConditions", (result) => {
+      if (correctUrl && ref && !test && result) {
         if (parseInt(ref.style.height.slice(0, 3)) > 0) {
           expandGroupsAndConditions();
         }
