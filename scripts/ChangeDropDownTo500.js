@@ -17,7 +17,11 @@ function dropdownTo500() {
   const dashboardEventArgument = `FireCommand:${dashboardEventTarget}$ctl00;PageSize;500`;
   if (document.querySelector("#ctl00_ContentBody_DG1") != null) {
     __doPostBack2(mainEventTarget, mainEventArgument);
-  } else {
+  } else if (
+    document.querySelector(
+      "#ctl00_ContentBody_ctrlPanelHolder_ctl0_RadGrid1"
+    ) != null
+  ) {
     __doPostBack2(dashboardEventTarget, dashboardEventArgument);
   }
 }
