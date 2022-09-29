@@ -31,10 +31,12 @@ Tool to facilitate the work of the implementation team.
 
 1. Clone this repository into a local folder.
 1. Go to the URL `chrome://extensions`
-2. Turn on the "Developer mode" in the right upper corner <br>
+2. Turn on the "Developer mode" in the right upper corner
+
 ![image](https://user-images.githubusercontent.com/109621179/191979674-4961f77d-fcc5-4116-869d-d0b4b6bc1799.png)
 
-3. Load the previous cloned folder by clicking in this button <br>
+3. Load the previous cloned folder by clicking in this button
+
 ![image](https://user-images.githubusercontent.com/109621179/191980019-fc4bdcea-5b67-49ba-b8e2-419ebeb738a9.png)
 
 
@@ -44,14 +46,16 @@ Tool to facilitate the work of the implementation team.
 2. Zip the cloned folder's content (not the folder).
 3. Go to the URL `about:debugging`.
 4. Click on "This Firefox" on the left panel.
-5. Click on "Load Temporary Add-on..." and select the compressed file<br>
+5. Click on "Load Temporary Add-on..." and select the compressed file
+
 ![image](https://user-images.githubusercontent.com/109621179/193043025-753fe0c2-aec6-4c69-be5d-e6af5054b7f3.png)
 
 > After the installation you should refresh VisualVault page in order to initialize the settings.
 
 ## Usage
 
-In your browser toolbar click on the extension icon to access its settings: <br>
+In your browser toolbar click on the extension icon to access its settings:
+
 ![image](https://user-images.githubusercontent.com/109621179/192633777-4abfe977-2bd8-42dd-be46-6ee02f1c2500.png)
 
 ## Adding scripts to extension
