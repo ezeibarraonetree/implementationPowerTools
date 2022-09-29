@@ -29,6 +29,7 @@ Tool to facilitate the work of the implementation team.
 
 First you need to download the folder from this link.
 [Download Chrome Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip)
+[Download Firefox Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip)
 
 ### Google Chrome
 
@@ -43,7 +44,19 @@ First you need to download the folder from this link.
 
 4. After the installation you should refresh VisualVault page in order to initialize the settings.
 
-> For now, it only supports Google Chrome.
+> After the installation you should refresh VisualVault page in order to initialize the settings.
+
+### Mozilla Firefox
+
+1. Clone the repository with specific branch: `git clone -b firefox https://github.com/ezeibarraonetree/implementationPowerTools.git`
+2. Zip the cloned folder's content (not the folder).
+3. Go to the URL `about:debugging`.
+4. Click on "This Firefox" on the left panel.
+5. Click on "Load Temporary Add-on..." and select the compressed file
+
+![image](https://user-images.githubusercontent.com/109621179/193043025-753fe0c2-aec6-4c69-be5d-e6af5054b7f3.png)
+
+> After the installation you should refresh VisualVault page in order to initialize the settings.
 
 ## Usage
 
