@@ -6,6 +6,7 @@ Tool to facilitate the work of the implementation team.
 
 - [Installation](#installation)
   - [Google Chrome](#google-chrome)
+  - [Mozilla Firefox](#mozilla-firefox)
 - [Usage](#usage)
 - [Adding scripts to extension](#adding-scripts-to-extension)
 - [Implementation Hooks](#implementation-hooks)
