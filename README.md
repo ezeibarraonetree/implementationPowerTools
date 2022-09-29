@@ -5,7 +5,6 @@ Tool to facilitate the work of the implementation team.
 ## Table of Contents
 
 - [Installation](#installation)
-  - [Google Chrome](#google-chrome)
   - [Mozilla Firefox](#mozilla-firefox)
 - [Usage](#usage)
 - [Adding scripts to extension](#adding-scripts-to-extension)
@@ -26,19 +25,6 @@ Tool to facilitate the work of the implementation team.
       - [Example of use](#example-of-use-3)
 
 ## Installation
-
-### Google Chrome
-
-1. Clone this repository into a local folder.
-1. Go to the URL `chrome://extensions`
-2. Turn on the "Developer mode" in the right upper corner
-
-![image](https://user-images.githubusercontent.com/109621179/191979674-4961f77d-fcc5-4116-869d-d0b4b6bc1799.png)
-
-3. Load the previous cloned folder by clicking in this button
-
-![image](https://user-images.githubusercontent.com/109621179/191980019-fc4bdcea-5b67-49ba-b8e2-419ebeb738a9.png)
-
 
 ### Mozilla Firefox
 
