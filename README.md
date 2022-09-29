@@ -2,6 +2,7 @@ Tool to facilitate the work of the implementation team.
 
 ## Table of Contents
 
+- [Download](#download)
 - [Installation](#installation)
   - [Google Chrome](#google-chrome)
   - [Mozilla Firefox](#mozilla-firefox)
@@ -24,13 +25,13 @@ Tool to facilitate the work of the implementation team.
       - [Usage](#usage-4)
       - [Example of use](#example-of-use-3)
 
-## Installation
-
-First you need to download the folder from this link.
+## Download
 
 **Google Chrome:** [Download Chrome Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip)
 
 **Mozilla Firefox:** [Download Firefox Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/dev-firefox.zip)
+
+## Installation
 
 ### Google Chrome
 
