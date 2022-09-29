@@ -26,8 +26,10 @@ Tool to facilitate the work of the implementation team.
 ## Installation
 
 First you need to download the folder from this link.
-[Download Chrome Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip)
-[Download Firefox Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/dev-firefox.zip)
+
+**Chrome:** [Download Chrome Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip)
+
+**Firefox:** [Download Firefox Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/dev-firefox.zip)
 
 ### Google Chrome
 
