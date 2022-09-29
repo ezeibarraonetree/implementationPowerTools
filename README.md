@@ -26,7 +26,8 @@ Tool to facilitate the work of the implementation team.
 
 ## Installation
 
-First you need to clone this repository into a local folder.
+First you need to download the folder from this link.
+[Download Chrome Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip)
 
 ### Google Chrome
 
