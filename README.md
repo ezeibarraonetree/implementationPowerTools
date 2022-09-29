@@ -33,7 +33,7 @@ First you need to download the folder from this link.
 
 ### Google Chrome
 
-1. [Download the file for Google Chrome](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip).
+1. Download the file for Google Chrome from [this link](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip).
 2. Unzip the file.
 3. Go to the URL `chrome://extensions`
 4. Turn on the "Developer mode" in the right upper corner
@@ -48,7 +48,7 @@ First you need to download the folder from this link.
 
 ### Mozilla Firefox
 
-1. [Download the file for Mozilla Firefox](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/dev-firefox.zip).
+1. Download the file for Mozilla Firefox from [this link](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/dev-firefox.zip).
 2. Unzip the file.
 3. Zip only the folder's content.
 4. Go to the URL `about:debugging`.
