@@ -6,6 +6,7 @@ Tool to facilitate the work of the implementation team.
 
 - [Installation](#installation)
   - [Google Chrome](#google-chrome)
+  - [Mozilla Firefox](#mozilla-firefox)
 - [Usage](#usage)
 - [Adding scripts to extension](#adding-scripts-to-extension)
 - [Implementation Hooks](#implementation-hooks)
@@ -26,27 +27,31 @@ Tool to facilitate the work of the implementation team.
 
 ## Installation
 
-First you need to clone this repository into a local folder.
-
 ### Google Chrome
 
+1. Clone this repository into a local folder.
 1. Go to the URL `chrome://extensions`
-2. Turn on the "Developer mode" in the right upper corner
-
+2. Turn on the "Developer mode" in the right upper corner <br>
 ![image](https://user-images.githubusercontent.com/109621179/191979674-4961f77d-fcc5-4116-869d-d0b4b6bc1799.png)
 
-3. Load the previous cloned folder by clicking in this button
-
+3. Load the previous cloned folder by clicking in this button <br>
 ![image](https://user-images.githubusercontent.com/109621179/191980019-fc4bdcea-5b67-49ba-b8e2-419ebeb738a9.png)
 
-4. After the installation you should refresh VisualVault page in order to initialize the settings.
 
-> For now, it only supports Google Chrome.
+### Mozilla Firefox
+
+1. Clone the repository with specific branch: `git clone -b firefox https://github.com/ezeibarraonetree/implementationPowerTools.git`
+2. Zip the cloned folder's content (not the folder).
+3. Go to the URL `about:debugging`.
+4. Click on "This Firefox" on the left panel.
+5. Click on "Load Temporary Add-on..." and select the compressed file<br>
+![image](https://user-images.githubusercontent.com/109621179/193043025-753fe0c2-aec6-4c69-be5d-e6af5054b7f3.png)
+
+> After the installation you should refresh VisualVault page in order to initialize the settings.
 
 ## Usage
 
-In your browser toolbar click on the extension icon to access its settings:
-
+In your browser toolbar click on the extension icon to access its settings: <br>
 ![image](https://user-images.githubusercontent.com/109621179/192633777-4abfe977-2bd8-42dd-be46-6ee02f1c2500.png)
 
 ## Adding scripts to extension
