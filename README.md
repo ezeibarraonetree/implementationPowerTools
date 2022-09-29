@@ -6,6 +6,7 @@ Tool to facilitate the work of the implementation team.
   - [Google Chrome](#google-chrome)
   - [Mozilla Firefox](#mozilla-firefox)
 - [Usage](#usage)
+- [Having issues?](#having-issues)
 - [Adding scripts to extension](#adding-scripts-to-extension)
 - [Implementation Hooks](#implementation-hooks)
   - [What are hooks?](#what-are-hooks)
@@ -64,6 +65,12 @@ First you need to download the folder from this link.
 In your browser toolbar click on the extension icon to access its settings:
 
 ![image](https://user-images.githubusercontent.com/109621179/192633777-4abfe977-2bd8-42dd-be46-6ee02f1c2500.png)
+
+## Having issues?
+
+If you have any issues related to installation, configuration or usage please get back to us.
+
+If you detect any bugs, [create a new issue](https://github.com/ezeibarraonetree/implementationPowerTools/issues/new).
 
 ## Adding scripts to extension
 
