@@ -27,36 +27,37 @@ Tool to facilitate the work of the implementation team.
 
 First you need to download the folder from this link.
 
-**Chrome:** [Download Chrome Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip)
+**Google Chrome:** [Download Chrome Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip)
 
-**Firefox:** [Download Firefox Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/dev-firefox.zip)
+**Mozilla Firefox:** [Download Firefox Folder Extension](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/dev-firefox.zip)
 
 ### Google Chrome
 
-1. Go to the URL `chrome://extensions`
-2. Turn on the "Developer mode" in the right upper corner
+1. [Download the file for Google Chrome](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/main-chrome.zip).
+2. Unzip the file.
+3. Go to the URL `chrome://extensions`
+4. Turn on the "Developer mode" in the right upper corner
 
 ![image](https://user-images.githubusercontent.com/109621179/191979674-4961f77d-fcc5-4116-869d-d0b4b6bc1799.png)
 
-3. Load the previous cloned folder by clicking in this button
+5. Load the folder by clicking on the button "Load Unpacked":
 
 ![image](https://user-images.githubusercontent.com/109621179/191980019-fc4bdcea-5b67-49ba-b8e2-419ebeb738a9.png)
 
-4. After the installation you should refresh VisualVault page in order to initialize the settings.
-
-> After the installation you should refresh VisualVault page in order to initialize the settings.
+6. After the installation you should refresh VisualVault page in order to initialize the settings.
 
 ### Mozilla Firefox
 
-1. Clone the repository with specific branch: `git clone -b firefox https://github.com/ezeibarraonetree/implementationPowerTools.git`
-2. Zip the cloned folder's content (not the folder).
-3. Go to the URL `about:debugging`.
-4. Click on "This Firefox" on the left panel.
-5. Click on "Load Temporary Add-on..." and select the compressed file
+1. [Download the file for Mozilla Firefox](https://github.com/ezeibarraonetree/implementationPowerTools/archive/refs/heads/dev-firefox.zip).
+2. Unzip the file.
+3. Zip only the folder's content.
+4. Go to the URL `about:debugging`.
+5. Click on "This Firefox" on the left panel.
+6. Click on "Load Temporary Add-on..." and select the compressed file
 
 ![image](https://user-images.githubusercontent.com/109621179/193043025-753fe0c2-aec6-4c69-be5d-e6af5054b7f3.png)
 
-> After the installation you should refresh VisualVault page in order to initialize the settings.
+7. After the installation you should refresh VisualVault page in order to initialize the settings.
 
 ## Usage
 
