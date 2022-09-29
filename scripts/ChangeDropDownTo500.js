@@ -15,9 +15,14 @@ function dropdownTo500() {
   const dashboardEventTarget =
     "ctl00$ContentBody$ctrlPanelHolder$ctl0$RadGrid1";
   const dashboardEventArgument = `FireCommand:${dashboardEventTarget}$ctl00;PageSize;500`;
+
   if (document.querySelector("#ctl00_ContentBody_DG1") != null) {
     __doPostBack2(mainEventTarget, mainEventArgument);
-  } else {
+  } else if (
+    document.querySelector(
+      "#ctl00_ContentBody_ctrlPanelHolder_ctl0_RadGrid1"
+    ) != null
+  ) {
     __doPostBack2(dashboardEventTarget, dashboardEventArgument);
   }
 }
@@ -36,6 +41,8 @@ function conditionalDropdownTo500() {
       document.querySelector('input[id*="PageSizeComboBox_Input"]') != null &&
       document.querySelector('input[id*="PageSizeComboBox_Input"]').value !=
         "500";
+
+    var home = url.indexOf("UserPortal") > -1;
 
     getStorageValue("ChangeDropDownTo500", (result) => {
       if (correctUrl && ref && !test && result) {
