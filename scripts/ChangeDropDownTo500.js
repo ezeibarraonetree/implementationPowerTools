@@ -15,6 +15,7 @@ function dropdownTo500() {
   const dashboardEventTarget =
     "ctl00$ContentBody$ctrlPanelHolder$ctl0$RadGrid1";
   const dashboardEventArgument = `FireCommand:${dashboardEventTarget}$ctl00;PageSize;500`;
+
   if (document.querySelector("#ctl00_ContentBody_DG1") != null) {
     __doPostBack2(mainEventTarget, mainEventArgument);
   } else if (
@@ -32,7 +33,9 @@ function conditionalDropdownTo500() {
     Añadir los cambios necesarios para el test*/
     var url = document.location.href;
     //correctUrl: porcion de codigo de la url que se repite donde queremos ejecutar el test
-    var correctUrl = url.indexOf("https://vv5demo.visualvault.com/app") > -1;
+    //var correctUrl = url.indexOf("https://vv5demo.visualvault.com/app") > -1;
+    var regex = new RegExp(/https:\/\/(.*).visualvault.com\/app/);
+    var correctUrl = regex.test(url);
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
     var test = document.querySelector(".ChangeDropDownTo500");
     //ref: elemento que solo existe en la pagina donde queremos que se ejecute
@@ -40,6 +43,8 @@ function conditionalDropdownTo500() {
       document.querySelector('input[id*="PageSizeComboBox_Input"]') != null &&
       document.querySelector('input[id*="PageSizeComboBox_Input"]').value !=
         "500";
+
+    var home = url.indexOf("UserPortal") > -1;
 
     getStorageValue("ChangeDropDownTo500", (result) => {
       if (correctUrl && ref && !test && result) {
