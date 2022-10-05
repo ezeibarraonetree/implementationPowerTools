@@ -12,10 +12,14 @@ function conditionalAlertBeforeClosing() {
     Añadir los cambios necesarios para el test*/
     var url = document.location.href;
     //correctUrl: porcion de codigo de la url que se repite donde queremos ejecutar el test
-    var correctUrl =
-      url.indexOf(
-        "https://vv5demo.visualvault.com/FormDesigner/index.html#!/formdesigner?xcid"
-      ) > -1;
+    // var correctUrl =
+    //   url.indexOf(
+    //     "https://vv5demo.visualvault.com/FormDesigner/index.html#!/formdesigner?xcid"
+    //   ) > -1;
+    var regex = new RegExp(
+      /https:\/\/(.*).visualvault.com\/FormDesigner\/index.html#!\/formdesigner?xcid/
+    );
+    var correctUrl = regex.test(url);
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion
     var test = document.querySelector(".FormDesignerAlertExit");
     //ref: elemento que solo existe en la pagina donde queremos que se ejecute
