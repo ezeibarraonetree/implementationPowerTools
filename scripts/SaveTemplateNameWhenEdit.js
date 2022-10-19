@@ -6,7 +6,6 @@ function saveTemplateNameWhenEditing() {
   for (let index = 0; index < selectorFila.length; index++) {
     var templateName = document.querySelectorAll("td.rgSorted");
     var formDesign = selectorFila[index].children[3];
-    if (formDesign.innerText == "Edit") {
       // formDesign.addEventListener("click", () => {
       //   chrome.storage.local.set({ name: templateName[index].innerText });
       // });
@@ -18,7 +17,6 @@ function saveTemplateNameWhenEditing() {
           chrome.storage.local.set({ name: templateName[index].innerText });
         }
       ).inject();
-    }
   }
 }
 
