@@ -1,5 +1,5 @@
 initStorage({
-  FormDesignerAlertExit: true,
+  FormDesignerAlertExit: false,
   AddFormPublicLink: true,
   ChangeDropDownTo500: true,
   ExpandGroupAndConditions: true,

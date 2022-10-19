@@ -1,7 +1,6 @@
 function addFormTemplateNameTitle() {
   document.body.classList.add("AddFormTemplateNameTitle");
   chrome.storage.local.get(["name"], (result) => {
-    console.log("ssss", result.name);
     document.title += ` - Form Template Name: ${result.name}`;
   });
 }
