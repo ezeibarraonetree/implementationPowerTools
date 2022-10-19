@@ -93,7 +93,7 @@ If you detect any bugs, [create a new issue](https://github.com/ezeibarraonetree
 
 ```js
 getStorageValue("YourScriptDescriptiveName", (result) => {
-  if (correctUrl && ref && test && result) {
+  if (correctUrl && ref && !test && result) {
     yourScriptDescriptiveName();
   }
 });
