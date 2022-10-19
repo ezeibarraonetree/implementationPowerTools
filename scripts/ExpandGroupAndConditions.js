@@ -20,7 +20,7 @@ function conditionalExpandGroupAndConditions() {
     //     "https://vv5demo.visualvault.com/FormDesigner/index.html#!/formdesigner?xcid"
     //   ) > -1;
     var regex = new RegExp(
-      /https:\/\/(.*).visualvault.com\/FormDesigner\/index.html#!\/formdesigner?xcid/
+      /https:\/\/(.*)\.visualvault\.com\/FormDesigner\/index\.html#!\/formdesigner\?xcid/
     );
     var correctUrl = regex.test(url);
     //test: es un elemento que nosotrso agregamos al ejecutar la funcion

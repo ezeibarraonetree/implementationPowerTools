@@ -5,6 +5,7 @@ Tool to facilitate the work of the implementation team.
 - [Download](#download)
 - [Installation](#installation)
   - [Mozilla Firefox](#mozilla-firefox)
+- [Current Scripts](#current-scripts)
 - [Usage](#usage)
 - [Having issues?](#having-issues)
 - [Adding scripts to extension](#adding-scripts-to-extension)
@@ -38,6 +39,17 @@ Tool to facilitate the work of the implementation team.
 
 > After the installation you should refresh VisualVault page in order to initialize the settings.
 
+## Current Scripts
+
+| Name | Description | Can be turned off |
+| ----- | ----------- | ----------------- |
+| AddFormTemplateNameTitle | Adds the form's template name to the window bar | False |
+| AddFormPublicLink | Adds an "world" icon link with the public form's link next to the form library's send link email button | True |
+| ChangeDropDownTo500 | Changes the current page size to 500 | True |
+| ExpandGroupAndConditions | Expands the form designer's groups and conditions | True |
+| FormDesignerAlertExit | Displays an confirm message when exiting the form designer to prevent data loss | True |
+| SaveTemplateNameWhenEdit | Saves the form when first editing a form template | False |
+
 ## Usage
 
 In your browser toolbar click on the extension icon to access its settings:
@@ -58,7 +70,7 @@ If you detect any bugs, [create a new issue](https://github.com/ezeibarraonetree
 
 ```js
 getStorageValue("YourScriptDescriptiveName", (result) => {
-  if (correctUrl && ref && test && result) {
+  if (correctUrl && ref && !test && result) {
     yourScriptDescriptiveName();
   }
 });
