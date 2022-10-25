@@ -12,5 +12,4 @@ jobs:
       with:
         type: 'zip'
         filename: 'dev-firefox.zip'
-        path: './releases'
         exclusions: '*.git* /*node_modules/* .editorconfig /*releases/*'
