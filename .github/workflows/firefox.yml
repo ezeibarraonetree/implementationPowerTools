@@ -5,10 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      with:
+        ref: dev-firefox
     - name: Create Firefox Release
       uses: thedoctor0/zip-release@main
       with:
-        ref: 'dev-firefox'
         type: 'zip'
         filename: 'dev-firefox.zip'
         path: './releases'
