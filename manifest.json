@@ -24,7 +24,8 @@
         "scripts/ChangeDropDownTo500.js",
         "scripts/ExpandGroupAndConditions.js",
         "scripts/SaveTemplateNameWhenEdit.js",
-        "scripts/AddFormTemplateNameTitle.js"
+        "scripts/AddFormTemplateNameTitle.js",
+        "scripts/FormDesignerHotkeys.js"
       ]
     }
   ],
