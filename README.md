@@ -2,16 +2,8 @@ Tool to facilitate the work of the implementation team.
 
 ## Table of Contents
 
-- [Download](#download)
-- [Installation](#installation)
-  - [Google Chrome](#google-chrome)
-  - [Mozilla Firefox](#mozilla-firefox)
-- [Current Scripts](#current-scripts)
-- [Usage](#usage)
-- [Having issues?](#having-issues)
-- [Adding scripts to extension](#adding-scripts-to-extension)
 - [Implementation Hooks](#implementation-hooks)
-  - [What are hooks?](#what-are-hooks)
+  - [What are 'Hooks'?](#what-are-hooks)
   - [Types](#types)
     - [useEvent](#useevent)
       - [Usage](#usage-1)
@@ -25,6 +17,8 @@ Tool to facilitate the work of the implementation team.
     - [useInsertAdjacentHTML](#useinsertadjacenthtml)
       - [Usage](#usage-4)
       - [Example of use](#example-of-use-3)
+- [Form Designer Hotkeys](#form-designer-hotkeys)
+  - [Do you want to add a hotkey?](#do-you-want-to-add-a-hotkey)
 
 ## Download
 
@@ -72,6 +66,7 @@ Tool to facilitate the work of the implementation team.
 | ExpandGroupAndConditions | Expands the form designer's groups and conditions | True |
 | FormDesignerAlertExit | Displays an confirm message when exiting the form designer to prevent data loss | True |
 | SaveTemplateNameWhenEdit | Saves the form when first editing a form template | False |
+| FormDesignerHotkeys | Adds hotkeys (keyboard shortcuts) to the Form Designer | True |
 
 ## Usage
 
@@ -213,3 +208,20 @@ new useInsertAdjacentHTML(
   "afterend"
 );
 ```
+
+# Form Designer Hotkeys
+
+This is a list of hotkeys added:
+
+|Key | Description |
+| -- | ----------- |
+| i |	Open DropDown Item List |
+| n |	Change the focus to "Name" input in the Control Appearence section |
+| s |	Change the focus to "Font size" input in the Control Miscellaneous section |
+| t |	Change the focus to "Text" in the Control Miscellaneous section |
+| | |
+| Del | Delete the Item list item |
+
+## Do you want to add a hotkey?
+
+You can pull an issue [here](#having-issues).
