@@ -20,16 +20,7 @@ function FormDesignerHotkeys() {
    *
    *  @param e The keyboard input event
    *
-   *  ## Shortcuts (Alphabetically sorted)
-   *
-   *  Key      Description
-   * ----------------------
-   *  i		Open DropDown Item List
-   *  n		Change the focus to "Name" input in the Control Appearence section
-   *  s		Change the focus to "Font size" input in the Control Miscellaneous section
-   *  t		Change the focus to "Text" in the Control Miscellaneous section
-   *
-   *  Del  	Delete the Item list item
+   *  ## Shortcuts (Alphabetically sorted) list on README
    *
    */
   document.onkeydown = (e) => {
